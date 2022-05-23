@@ -1,5 +1,5 @@
 text = ""
-with open("input.txt", 'r') as f:
+with open("2019/inputs/2.txt", 'r') as f:
     text = f.read()
 
 intcodes = text.split(',')
@@ -14,10 +14,8 @@ while(halt != True):
     if opcode == 99:
         halt = True
     elif (opcode == 1):
-        print("found opcode 1 adding")
         intcodes[int(intcodes[position+3])] = int(intcodes[int(intcodes[position+1])]) + int(intcodes[int(intcodes[position+2])])
     elif (opcode == 2):
-        print("found opcode 2 multiplying")
         intcodes[int(intcodes[position+3])] = int(intcodes[int(intcodes[position+1])]) * int(intcodes[int(intcodes[position+2])])
     
     position += 4

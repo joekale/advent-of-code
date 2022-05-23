@@ -75,7 +75,7 @@ def run_opcode(intcodes, position):
 
 
 text = ""
-with open("day5/input.txt", 'r') as f:
+with open("2019/inputs/5.txt", 'r') as f:
     text = f.read()
 
 intcodes = text.split(',')

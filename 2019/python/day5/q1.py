@@ -35,7 +35,7 @@ def run_opcode(intcodes, position):
     return jump
 
 text = ""
-with open("input.txt", 'r') as f:
+with open("2019/inputs/5.txt", 'r') as f:
     text = f.read()
 
 intcodes = text.split(',')

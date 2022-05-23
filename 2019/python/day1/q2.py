@@ -8,7 +8,7 @@ def calc_required_fuel(fuel):
 
 
 fuel = 0
-with open("input.txt", 'r') as f:
+with open("2019/inputs/1.txt", 'r') as f:
     for mass in f.readlines():
         fuel += calc_required_fuel(int(mass))
 

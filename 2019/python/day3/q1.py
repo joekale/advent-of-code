@@ -81,7 +81,7 @@ def get_intersection_distance(p11, p12, p21, p22):
 Start of the main program. at this stage I may change to the if __main__ check to better delineate
 """
 wirepaths = {}
-with open("input.txt", 'r') as f:
+with open("2019/inputs/3.txt", 'r') as f:
     input = f.read()
     wirepaths = input.splitlines()
     for i, wirepath in enumerate(wirepaths):

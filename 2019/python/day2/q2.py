@@ -22,7 +22,7 @@ def test_inputs(memory, noun, verb):
 
 
 text = ""
-with open("input.txt", 'r') as f:
+with open("2019/inputs/2.txt", 'r') as f:
     text = f.read()
 
 intcodes = text.split(',')
