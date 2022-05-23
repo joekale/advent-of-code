@@ -1,2 +1,5 @@
-add_subdirectory(cmake)
-add_subdirectory(cpp)
+if(ADVENT_OF_CMAKE)
+    add_subdirectory(cmake)
+else()
+    add_subdirectory(cpp)
+endif()

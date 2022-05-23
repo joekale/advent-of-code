@@ -1,0 +1,1 @@
+message("No CMake configurable code in 2021")
