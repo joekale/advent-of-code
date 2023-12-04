@@ -9,6 +9,23 @@ fn main() {
     println!("Part 2 Answer: {}", res_p2);
 }
 
+
+fn part1_string_to_calibration(line: String) -> usize {
+    let mut first = 10;
+    let mut second = 0;
+    for ch in line.chars() {
+        if first > 9 && ch.is_numeric() {
+            first = ch.to_digit(10).ok_or("Failed to parse digit").unwrap();
+            second = ch.to_digit(10).ok_or("Failed to parse digit").unwrap();
+        } else if first < 10 && ch.is_numeric() {
+            second = ch.to_digit(10).ok_or("Failed to parse digit").unwrap();
+        }
+    }
+
+    let res = usize::try_from((first * 10) + second).unwrap();
+    return res;
+}
+
 fn part2_string_to_calibration(line: String) -> usize {
     let hmap = HashMap::from([("one", 1), ("two", 2), ("three", 3), ("four", 4), ("five", 5),
                                                   ("six", 6), ("seven", 7), ("eight", 8), ("nine", 9)]);
@@ -55,22 +72,6 @@ fn part2_string_to_calibration(line: String) -> usize {
                 }
             },
             _ => {}
-        }
-    }
-
-    let res = usize::try_from((first * 10) + second).unwrap();
-    return res;
-}
-
-fn part1_string_to_calibration(line: String) -> usize {
-    let mut first = 10;
-    let mut second = 0;
-    for ch in line.chars() {
-        if first > 9 && ch.is_numeric() {
-            first = ch.to_digit(10).ok_or("Failed to parse digit").unwrap();
-            second = ch.to_digit(10).ok_or("Failed to parse digit").unwrap();
-        } else if first < 10 && ch.is_numeric() {
-            second = ch.to_digit(10).ok_or("Failed to parse digit").unwrap();
         }
     }
 
